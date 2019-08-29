@@ -1,0 +1,259 @@
+{
+	"variables": [],
+	"info": {
+		"name": "tblocksApiTest",
+		"_postman_id": "4236ad86-f1ae-567b-d128-d06c83ab625f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login to get JWT Token",
+			"request": {
+				"url": "http://localhost:15209/api/Account/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test@email.com\",\r\n  \"password\": \"Test@@123\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Category Create",
+			"request": {
+				"url": "http://localhost:15209/api/ProductCategories",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZTAwYjBlNi1mNDEyLTQ4MDctODg0MS1hZGQ3NjFkNGRmMjgifQ.us48aOVVE2jBHnrTSf66P4nLW2jVopSE0bRYOLE65zU",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productCategoryId\": 0,\r\n  \"productCategoryName\": \"New Category\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Category Lists",
+			"request": {
+				"url": "http://localhost:15209/api/ProductCategories",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZTAwYjBlNi1mNDEyLTQ4MDctODg0MS1hZGQ3NjFkNGRmMjgifQ.us48aOVVE2jBHnrTSf66P4nLW2jVopSE0bRYOLE65zU",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Category By ID",
+			"request": {
+				"url": "http://localhost:15209/api/ProductCategories/2",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZTAwYjBlNi1mNDEyLTQ4MDctODg0MS1hZGQ3NjFkNGRmMjgifQ.us48aOVVE2jBHnrTSf66P4nLW2jVopSE0bRYOLE65zU",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Category Update",
+			"request": {
+				"url": "http://localhost:15209/api/ProductCategories/2",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZTAwYjBlNi1mNDEyLTQ4MDctODg0MS1hZGQ3NjFkNGRmMjgifQ.us48aOVVE2jBHnrTSf66P4nLW2jVopSE0bRYOLE65zU",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productCategoryId\": 2,\r\n  \"productCategoryName\": \"Category Changed\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Category Delete",
+			"request": {
+				"url": "http://localhost:15209/api/ProductCategories/2",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZTAwYjBlNi1mNDEyLTQ4MDctODg0MS1hZGQ3NjFkNGRmMjgifQ.us48aOVVE2jBHnrTSf66P4nLW2jVopSE0bRYOLE65zU",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Products",
+			"request": {
+				"url": "http://localhost:15209/api/Products",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZTAwYjBlNi1mNDEyLTQ4MDctODg0MS1hZGQ3NjFkNGRmMjgifQ.us48aOVVE2jBHnrTSf66P4nLW2jVopSE0bRYOLE65zU",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productCategoryId\": 0,\r\n  \"productCategoryName\": \"New Category\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product",
+			"request": {
+				"url": "http://localhost:15209/api/Products",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZTAwYjBlNi1mNDEyLTQ4MDctODg0MS1hZGQ3NjFkNGRmMjgifQ.us48aOVVE2jBHnrTSf66P4nLW2jVopSE0bRYOLE65zU",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productId\": 0,\r\n  \"productCategoryId\": 1,\r\n  \"productTitle\": \"p 1\",\r\n  \"productDescription\": \"p d 1\",\r\n  \"productPrice\": 100,\r\n  \"productImagePath\": \"\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product By ID",
+			"request": {
+				"url": "http://localhost:15209/api/Products/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZTAwYjBlNi1mNDEyLTQ4MDctODg0MS1hZGQ3NjFkNGRmMjgifQ.us48aOVVE2jBHnrTSf66P4nLW2jVopSE0bRYOLE65zU",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productId\": 0,\r\n  \"productCategoryId\": 1,\r\n  \"productTitle\": \"p 1\",\r\n  \"productDescription\": \"p d 1\",\r\n  \"productPrice\": 100,\r\n  \"productImagePath\": \"\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"url": "http://localhost:15209/api/Products/2",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZTAwYjBlNi1mNDEyLTQ4MDctODg0MS1hZGQ3NjFkNGRmMjgifQ.us48aOVVE2jBHnrTSf66P4nLW2jVopSE0bRYOLE65zU",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Product Image",
+			"request": {
+				"url": "http://localhost:15209/api/Products/UploadProductImage",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZTAwYjBlNi1mNDEyLTQ4MDctODg0MS1hZGQ3NjFkNGRmMjgifQ.us48aOVVE2jBHnrTSf66P4nLW2jVopSE0bRYOLE65zU",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"value": "",
+							"description": "",
+							"type": "file"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
